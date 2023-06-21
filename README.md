@@ -1,1 +1,2 @@
 # Food
+The website of a company that sells healthy food. For this website, using javascript, I did all the interactivity, dynamic card building, model windows display, slider, food calorie calculator and calorie requirements, contact form using AJAX.
