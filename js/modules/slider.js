@@ -44,14 +44,27 @@ function slider () {
             } else {
                 document.querySelector("#total").innerHTML = `${this.slidesQuantity}`;
             }
+            const dots = document.querySelectorAll('.dot')
+            dots.forEach(dot =>{
+                dot.classList.remove('active-dot');
+                if( +dot.dataset.dot ==  this.currentSlideNumber-1){
+                    dot.classList.add('active-dot')
+                }
+            })
         }
         addDots(){
             const div = document.createElement("div");
             div.classList.add("carousel-indicators");
             for (let i = 0; i< this.slidesQuantity; i++){
-                div.innerHTML += `
-                <span class="dot" dot-data=${i}></span>
+                if (i === 0){
+                    div.innerHTML += `
+                    <span class="dot active-dot" data-dot=${i}></span>
                 `;
+                } else{
+                    div.innerHTML += `
+                    <span class="dot" data-dot=${i}></span>
+                `;
+                }
             }
             this.sliderWrapper.append(div);
             document.querySelectorAll(".dot").forEach(dot =>{

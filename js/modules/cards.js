@@ -4,23 +4,23 @@ function cards () {
           {
             img: "img/tabs/vegy.jpg",
             altimg: "vegy",
-            title: "Меню 'Фитнес'",
-            descr: "Меню 'Фитнес' - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Продукт активных и здоровых людей. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!",
-            price: 500
+            title: "Menu 'Fitness'",
+            descr: "The 'Fitness' menu is a new approach to cooking: more fresh vegetables and fruits. Product of active and healthy people. This is a brand new product with the best price and high quality!",
+            price: 20
           },
           {
             img: "img/tabs/post.jpg",
             altimg: "post",
-            title: "Меню 'Постное'",
-            descr: "Меню 'Постное' - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения, молоко из миндаля, овса, кокоса или гречки, правильное количество белков за счет тофу и импортных вегетарианских стейков.",
-            price: 600
+            title: "Menu 'Lenten'",
+            descr: "The 'Lenten' menu is a careful selection of ingredients: no animal products, milk from almonds, oats, coconut or buckwheat, the right amount of protein from tofu and imported vegetarian steaks.",
+            price: 25
           },
           {
             img: "img/tabs/elite.jpg",
             altimg: "elite",
-            title: "Меню 'Премиум'",
-            descr: "В меню 'Премиум' мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!",
-            price: 900
+            title: "Menu 'Premium'",
+            descr: "In the 'Premium' menu, we use not only beautiful packaging design, but also high-quality execution of dishes. Red fish, seafood, fruits - a restaurant menu without going to a restaurant!",
+            price: 40
           }
         ],
         requests: []
@@ -46,7 +46,7 @@ function cards () {
                 <div class="menu__item-divider"></div>
                 <div class="menu__item-price">
                     <div class="menu__item-cost">Цена:</div>
-                    <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
+                    <div class="menu__item-total"><span>${this.price}</span> usd/day</div>
                 </div>
             `;
             this.wraper.append(div);

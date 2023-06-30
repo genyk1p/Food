@@ -4,13 +4,13 @@ import {postDataToDb} from "../services/services";
 function forms (){
     const status = {
         loading: "img/form/spinner.svg",
-        done: "Запрос успешно выполнен",
-        error: "Чтото пошло не так"
+        done: "Request completed successfully",
+        error: "Something went wrong"
         };
     // Меняем поведение формы, навешиваем обработчик и конструируем Ajax запрос на сервер
     function changeformsBehavor(){
         document.addEventListener("click", (e)=>{
-            if(e.target && e.target.innerHTML === "Перезвонить мне"){
+            if(e.target && e.target.innerHTML === "Call me back"){
                 const arr = [];
                 e.target.parentElement.querySelectorAll("input").forEach(input =>{
                     arr.push(input.value);
@@ -36,7 +36,6 @@ function forms (){
                 if(document.querySelector(".modal")){
                     document.querySelector(".modal").remove();
                 }
-                console.log("+++");
                 const newModal = new Modal("", false, status.done);
                 newModal.addModaltoHtml();
                 setTimeout(() => {
